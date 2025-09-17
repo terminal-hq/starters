@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
 import { AuthModal } from "@/components/auth/auth-modal";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,9 @@ export default function RootLayout({
         >
           {children}
           <Toaster />
-          <AuthModal />
+          <Suspense>
+            <AuthModal />
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
