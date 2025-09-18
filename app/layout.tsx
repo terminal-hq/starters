@@ -37,9 +37,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Toaster />
           <Suspense>
+            {children}
+            <Toaster />
             <AuthModal />
           </Suspense>
         </ThemeProvider>
