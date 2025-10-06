@@ -83,10 +83,7 @@ export function AuthModal() {
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent
-        className="sm:max-w-sm p-0 overflow-hidden"
-        showCloseButton
-      >
+      <DialogContent className="sm:max-w-sm p-0 overflow-hidden">
         <div className="px-6 pt-6 pb-3 text-center space-y-2">
           <div className="mx-auto h-8 w-8 rounded grid place-items-center text-xs font-semibold">
             <Logo />
