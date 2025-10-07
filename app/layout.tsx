@@ -6,17 +6,17 @@ import { Toaster } from "sonner";
 import { AuthModal } from "@/components/auth/auth-modal";
 import { Suspense } from "react";
 
-const geistSans = Geist({
+const sans = Geist({
   variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const mono = Geist_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
 });
 
-const lora = Noto_Serif({
+const serif = Noto_Serif({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} antialiased`}
+        className={`${sans.variable} ${mono.variable} ${serif.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
