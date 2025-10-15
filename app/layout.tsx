@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { AuthModal } from "@/components/auth/auth-modal";
 import { Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -47,7 +46,6 @@ export default function RootLayout({
           <Suspense>
             {children}
             <Toaster />
-            <AuthModal />
           </Suspense>
         </ThemeProvider>
       </body>
