@@ -37,11 +37,11 @@ export function Toaster() {
                       {props?.variant && (
                         <div className="w-[20px] h-[20px] flex items-center">
                           {props.variant === "ai" && (
-                            <MdAutoAwesome className="text-[#0064D9]" />
+                            <MdAutoAwesome className="text-chart-1" />
                           )}
                           {props?.variant === "success" && <MdCheck />}
                           {props?.variant === "error" && (
-                            <MdError className="text-[#FF3638]" />
+                            <MdError className="text-destructive" />
                           )}
                           {props?.variant === "progress" && (
                             <Spinner className="h-4 w-4 animate-spin" />
@@ -56,7 +56,7 @@ export function Toaster() {
 
                     <div>
                       {props?.variant === "progress" && (
-                        <span className="text-sm text-[#878787]">
+                        <span className="text-sm text-muted-foreground">
                           {progress}%
                         </span>
                       )}
